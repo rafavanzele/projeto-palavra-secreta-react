@@ -28,7 +28,7 @@ function App() {
   //Declarando variáveis para o Start Game
   const [pickedWord, setPickedword] = useState('')
   const [pickedCategory, setPickedCategory] = useState('')
-  const [letters, setLetters] = useState('')
+  const [letters, setLetters] = useState([])
 
   const pickWordAndCategory = () => {
     //escolha a category
