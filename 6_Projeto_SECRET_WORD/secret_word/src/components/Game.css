@@ -11,11 +11,13 @@
 }
 
 .wordContainer {
+    
     margin: 1.5em;
     padding: 1.5em;
     border: 20px solid #ff0055ab;
     display: flex;
-    width: auto;   
+    width: auto; 
+    justify-content: center;  
 }
 
 .letter, .blankSquare {
