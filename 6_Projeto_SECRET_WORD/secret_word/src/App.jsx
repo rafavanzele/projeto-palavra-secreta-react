@@ -36,6 +36,9 @@ function App() {
   const [guesses, setGuesses] = useState(4)
   const [score, setScore] = useState(0)
 
+  //variável pra quantidade de palpites
+  const guessesQtd = 4
+
   
   const pickWordAndCategory = () => {
     //escolha a category
@@ -78,13 +81,56 @@ function App() {
 
 
   //Processando a Letra no input
-  const verifyLetter = () => {
-    setGameStage(stages[2].name)
+  const verifyLetter = (letter) => {
+    
+    const normalizeLetter = letter.toLowerCase()
+
+    //checando se a letra já foi utilizada
+    if (guessedLetters.includes(normalizeLetter) || wrongLetters.includes(normalizeLetter)) {
+      return
+    }
+
+    // imprimir letra adivinhada ou remover uma tentativa
+    if (letters.includes(normalizeLetter)) {
+      setGuessedLetters((actualGuestLetters) => [
+        ...actualGuestLetters,
+        normalizeLetter
+      ])
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters,
+        normalizeLetter
+      ])
+
+      setGuesses((actualGuesses) => actualGuesses-1)
+
+    }
+
+
   }
+
+
+  const clearLetterStates = () => {
+    setGuessedLetters([])
+    setWrongLetters([])
+  }
+
+  useEffect(() => {
+    if (guesses <= 0) {
+      //resetar states do jogo
+      clearLetterStates()
+
+
+      setGameStage(stages[2].name)
+    }
+  }, [guesses])
 
 
   //Retry jogo
   const retry = () => {
+    setScore(0)
+    setGuesses(guessesQtd)
+
     setGameStage(stages[0].name)
   }
   
