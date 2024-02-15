@@ -20,6 +20,9 @@ const stages = [
   {id: 3, name: 'end'},
 ]
 
+//variável pra quantidade de palpites
+const guessesQtd = 3
+
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordList)
@@ -33,11 +36,10 @@ function App() {
 // variáveis para começar o jogo
   const [guessedLetters, setGuessedLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
-  const [guesses, setGuesses] = useState(4)
+  const [guesses, setGuesses] = useState(guessesQtd)
   const [score, setScore] = useState(0)
 
-  //variável pra quantidade de palpites
-  const guessesQtd = 4
+  
 
   
   const pickWordAndCategory = () => {
