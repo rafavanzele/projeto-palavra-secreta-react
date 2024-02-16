@@ -140,7 +140,7 @@ function App() {
     //win condition
     if (guessedLetters.length === uniqueLetters.length) {
       //score
-      setScore((actualScore) => actualScore += 100)
+      setScore((actualScore) => actualScore += 50)
 
       //restart game com palavra nova
       startGame()
