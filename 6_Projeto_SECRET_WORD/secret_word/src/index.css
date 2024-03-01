@@ -8,19 +8,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(217deg, #000, rgba(255,0,0,0) 70.71%),
-              linear-gradient(127deg, #D14900, rgba(0,255,0,0) 50.71%),
-              linear-gradient(336deg, #000, rgba(0,0,255,0) 70.71%),
-              linear-gradient(336deg, #d14900, rgba(0,0,255,0) 70.71%),
-              linear-gradient(336deg, #000, rgba(0,0,255,0) 70.71%);
+  background: linear-gradient(217deg, #219EBC, rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, #023047, rgba(0,255,0,0) 50.71%),
+              linear-gradient(336deg, #8ECAE6, rgba(0,0,255,0) 70.71%),
+              linear-gradient(336deg, #219EBC, rgba(0,0,255,0) 70.71%),
+              linear-gradient(336deg, #023047, rgba(0,0,255,0) 70.71%);
   color: #fff;
 }
 
 button {
-  color: #fff;
-  background-color: #000;
+  color: #023047;
+  background-color: #fff;
   padding: 0 45px;
-  border: 2px solid #D14900;
+  border: 2px solid #023047;
   border-radius: 25px;
   height: 50px;
   text-transform: uppercase;
@@ -31,6 +31,6 @@ button {
 }
 
 button:hover {
-  background-color: #D14900;
+  background-color: #219EBC;
   color: #000;
 }

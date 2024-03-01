@@ -4,17 +4,18 @@
 
 .points span {
     font-weight: bold;
+    color: #FB8500;
 }
 
 .tip span {
-    color: #D14900;
+    color: #FB8500;
 }
 
 .wordContainer {
     
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid #D14900;
+    border: 20px solid #FB8500;
     display: flex;
     width: auto; 
     justify-content: center;  
@@ -23,7 +24,7 @@
 .letter, .blankSquare {
     font-size: 70px;
     line-height: 1.5;
-    border: 3px solid #000;
+    border: 3px solid #023047;
     height: 100px;
     width: 100px;
     text-transform: uppercase;
@@ -48,5 +49,5 @@
     font-size: 2em;
     text-align: center;
     margin-right: 1em;
-    border: 3px solid #000;
+    border: 3px solid #023047;
 }
